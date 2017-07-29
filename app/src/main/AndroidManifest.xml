@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dmustt.mdewantara">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_park_here"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_park_here"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".parkhere.core.DashboardActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".stadium.core.StadiumActivity"
+            android:label="ParkHere"
+            android:parentActivityName=".parkhere.core.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".parkhere.core.DashboardActivity" />
+        </activity>
+        <activity android:name=".parking_area.core.ParkingAreaActivity"
+            android:label="ParkHere"
+            android:parentActivityName=".stadium.core.StadiumActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".stadium.core.StadiumActivity"/>
+        </activity>
+    </application>
+
+</manifest>

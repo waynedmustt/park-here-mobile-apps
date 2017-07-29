@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="BASE_URL">http://103.23.22.8</string>
+    <string name="PORT">3000</string>
+    <string name="API_PATH">/park-here/api/</string>
+</resources>
